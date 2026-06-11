@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b6omj8hfgjrre"]
+
+[ext_resource type="Script" uid="uid://puk2whgttl1f" path="res://BaseComponents/HpComponent/hp_manager_component.gd" id="1_ea445"]
+
+[node name="HpManagerComponent" type="Node" unique_id=499507257]
+script = ExtResource("1_ea445")
