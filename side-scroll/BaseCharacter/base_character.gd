@@ -7,3 +7,4 @@ func _process(delta: float) -> void:
 		velocity.y += gravity * delta
 		
 	move_and_slide()
+	print("Hello world")
