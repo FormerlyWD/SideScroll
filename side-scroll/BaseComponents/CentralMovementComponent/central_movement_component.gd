@@ -9,6 +9,7 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var movement_vectors: Dictionary = {}
 @export var vertical_air_velocity :float = 0.0
 func set_vector(component_name: String, vector: Vector2) -> void:
+	if vector == Vector2.ZERO: return
 	movement_vectors[component_name] = vector
 
 func remove_vector(component_name: String) -> void:
@@ -22,7 +23,6 @@ func _physics_process(delta: float) -> void:
 	
 	for component_vector in movement_vectors.values():
 		final_velocity += component_vector
-		
 	
 	if not unit.is_on_floor():
 		if is_gravity_enabled: 
@@ -34,6 +34,5 @@ func _physics_process(delta: float) -> void:
 		
 	final_velocity.y += vertical_air_velocity
 	unit.velocity = final_velocity
-
 		
 	unit.move_and_slide()
