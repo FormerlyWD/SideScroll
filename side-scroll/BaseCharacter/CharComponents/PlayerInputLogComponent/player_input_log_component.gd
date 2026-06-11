@@ -8,5 +8,5 @@ class_name PlayerInputLogComponent
 func _input(event: InputEvent) -> void:
 	pass
 	if event.is_action_pressed("Halt"):
-		print("what.")
+		side_scrolling_component.switch_movement_state(SideScrollingComponent.MoveState.BLOCKED)
 		

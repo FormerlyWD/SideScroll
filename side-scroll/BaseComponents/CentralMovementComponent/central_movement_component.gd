@@ -9,7 +9,7 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var movement_vectors: Dictionary = {}
 @export var vertical_air_velocity :float = 0.0
 func set_vector(component_name: String, vector: Vector2) -> void:
-	if vector == Vector2.ZERO: return
+	if vector == Vector2.ZERO: remove_vector(component_name)
 	movement_vectors[component_name] = vector
 
 func remove_vector(component_name: String) -> void:
