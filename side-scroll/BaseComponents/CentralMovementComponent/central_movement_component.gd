@@ -7,7 +7,7 @@ class_name CentralMovementComponent
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var is_gravity_enabled:bool = true
 @export var movement_vectors: Dictionary = {}
-var vertical_air_velocity :float = 0.0
+@export var vertical_air_velocity :float = 0.0
 func set_vector(component_name: String, vector: Vector2) -> void:
 	movement_vectors[component_name] = vector
 

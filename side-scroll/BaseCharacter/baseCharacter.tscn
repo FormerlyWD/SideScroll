@@ -28,8 +28,8 @@ shape = SubResource("RectangleShape2D_8xusn")
 unit = NodePath("../..")
 
 [node name="SideScrollingComponent" parent="Movement" unique_id=668967457 node_paths=PackedStringArray("central_movement_component") instance=ExtResource("4_lhylj")]
+current_move_state = 1
 central_movement_component = NodePath("../CentralMovementComponent")
-movement_speed = 22.965
 
 [node name="HpManagerComponent" parent="." unique_id=499507257 instance=ExtResource("5_lhylj")]
 health = 50.0
