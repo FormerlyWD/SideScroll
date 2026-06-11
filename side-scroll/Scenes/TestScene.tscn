@@ -10,7 +10,7 @@ size = Vector2(3427, 273)
 [node name="TestScene" type="Node2D" unique_id=1688470177]
 
 [node name="BaseCharacter" parent="." unique_id=1582287107 instance=ExtResource("1_b5ayd")]
-position = Vector2(52, -254)
+position = Vector2(-29, -237)
 
 [node name="Camera2D" type="Camera2D" parent="BaseCharacter" unique_id=1783521721]
 
