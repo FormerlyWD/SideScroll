@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cqj2t6uem1xp8"]
+
+[ext_resource type="Texture2D" uid="uid://dhq58da247ctn" path="res://icon.svg" id="1_8xusn"]
+[ext_resource type="Script" uid="uid://ix7nk5llcjii" path="res://BaseCharacter/base_character.gd" id="1_vlvs1"]
+[ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseCharacter/SideScrollComponent/SideSCrollingComponent.tscn" id="3_4p1yc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xusn"]
+size = Vector2(127, 203.5)
+
+[node name="BaseCharacter" type="CharacterBody2D" unique_id=1582287107]
+script = ExtResource("1_vlvs1")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1421732356]
+scale = Vector2(1, 1.59375)
+texture = ExtResource("1_8xusn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=318249085]
+position = Vector2(1, -0.25)
+shape = SubResource("RectangleShape2D_8xusn")
+
+[node name="SideScrollingComponent" parent="." unique_id=864817646 node_paths=PackedStringArray("unit") instance=ExtResource("3_4p1yc")]
+unit = NodePath("..")
+movement_speed = 5.0
