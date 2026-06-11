@@ -26,4 +26,4 @@ unit = NodePath("../..")
 
 [node name="SideScrollingComponent" parent="Movement" unique_id=864817646 node_paths=PackedStringArray("central_movement_component") instance=ExtResource("3_4p1yc")]
 central_movement_component = NodePath("../CentralMovementComponent")
-movement_speed = -53.0
+movement_speed = 27.93
