@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dhq58da247ctn" path="res://icon.svg" id="1_8xusn"]
 [ext_resource type="Script" uid="uid://ix7nk5llcjii" path="res://BaseCharacter/base_character.gd" id="1_vlvs1"]
-[ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseCharacter/SideScrollComponent/SideSCrollingComponent.tscn" id="3_4p1yc"]
 [ext_resource type="PackedScene" uid="uid://bi77v2s7baxmo" path="res://BaseComponents/CentralMovementComponent/CentralMovementComponent.tscn" id="4_grcth"]
+[ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseComponents/SideScrollComponent/SideScrollingComponent.tscn" id="4_lhylj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xusn"]
 size = Vector2(127, 203.5)
@@ -24,6 +24,6 @@ shape = SubResource("RectangleShape2D_8xusn")
 [node name="CentralMovementComponent" parent="Movement" unique_id=1041552152 node_paths=PackedStringArray("unit") instance=ExtResource("4_grcth")]
 unit = NodePath("../..")
 
-[node name="SideScrollingComponent" parent="Movement" unique_id=864817646 node_paths=PackedStringArray("central_movement_component") instance=ExtResource("3_4p1yc")]
+[node name="SideScrollingComponent" parent="Movement" unique_id=668967457 node_paths=PackedStringArray("central_movement_component") instance=ExtResource("4_lhylj")]
 central_movement_component = NodePath("../CentralMovementComponent")
-movement_speed = 27.93
+movement_speed = 22.965

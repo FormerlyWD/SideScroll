@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://da2sk8frvtjyw"]
+
+[ext_resource type="Script" uid="uid://cfxn7014koi2f" path="res://BaseComponents/SideScrollComponent/side_scrolling_component.gd" id="1_1h2bo"]
+
+[node name="SideScrollingComponent2" type="Node" unique_id=668967457]
+script = ExtResource("1_1h2bo")

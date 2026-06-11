@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqj2t6uem1xp8" path="res://BaseCharacter/baseCharacter.tscn" id="1_b5ayd"]
 [ext_resource type="Texture2D" uid="uid://dhq58da247ctn" path="res://icon.svg" id="2_5lt6y"]
+[ext_resource type="PackedScene" uid="uid://byx6x0gebbxct" path="res://Enemies/BaseEnemyBlueprint/BaseEnemyBlueprint.tscn" id="3_8k7wh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5ayd"]
 size = Vector2(724, 273)
@@ -9,6 +10,7 @@ size = Vector2(724, 273)
 [node name="TestScene" type="Node2D" unique_id=1688470177]
 
 [node name="BaseCharacter" parent="." unique_id=1582287107 instance=ExtResource("1_b5ayd")]
+position = Vector2(-112, -314)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=120702127]
 
@@ -22,3 +24,6 @@ scale = Vector2(5.65625, 1.6171875)
 texture = ExtResource("2_5lt6y")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1783521721]
+
+[node name="BaseEnemyBlueprint" parent="." unique_id=1116642208 instance=ExtResource("3_8k7wh")]
+position = Vector2(32, 67)

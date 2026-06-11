@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://byx6x0gebbxct"]
+
+[ext_resource type="Texture2D" uid="uid://dhq58da247ctn" path="res://icon.svg" id="1_n8wto"]
+[ext_resource type="PackedScene" uid="uid://bi77v2s7baxmo" path="res://BaseComponents/CentralMovementComponent/CentralMovementComponent.tscn" id="2_kprg5"]
+[ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseComponents/SideScrollComponent/SideScrollingComponent.tscn" id="3_kprg5"]
+[ext_resource type="PackedScene" uid="uid://b3dl5hjw61ff5" path="res://Enemies/EnemyComponents/EnemyFovs/EnemyUpFov/EnemyUpFov.tscn" id="4_o7lrv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsw0u"]
+size = Vector2(129, 128)
+
+[node name="BaseEnemyBlueprint" type="CharacterBody2D" unique_id=1116642208]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2089185151]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_dsw0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89082642]
+texture = ExtResource("1_n8wto")
+
+[node name="Movement" type="Node" parent="." unique_id=107550172]
+
+[node name="SideScrollingComponent" parent="Movement" unique_id=668967457 node_paths=PackedStringArray("central_movement_component") instance=ExtResource("3_kprg5")]
+central_movement_component = NodePath("../CentralMovementComponent")
+movement_speed = -14.015
+
+[node name="CentralMovementComponent" parent="Movement" unique_id=1041552152 node_paths=PackedStringArray("unit") instance=ExtResource("2_kprg5")]
+unit = NodePath("../..")
+
+[node name="EnemyUpFov" parent="." unique_id=1943964713 instance=ExtResource("4_o7lrv")]
