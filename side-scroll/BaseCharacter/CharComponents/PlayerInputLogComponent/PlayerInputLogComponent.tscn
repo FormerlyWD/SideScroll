@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c4dq35xmlw55y"]
+
+[ext_resource type="Script" uid="uid://efkbc7hjsa4j" path="res://BaseCharacter/CharComponents/PlayerInputLogComponent/player_input_log_component.gd" id="1_5nlj0"]
+
+[node name="PlayerInputLogComponent" type="Node" unique_id=867351471]
+script = ExtResource("1_5nlj0")

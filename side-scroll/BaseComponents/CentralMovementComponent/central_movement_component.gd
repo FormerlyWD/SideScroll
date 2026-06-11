@@ -1,6 +1,9 @@
 extends Node
 class_name CentralMovementComponent
 @export var unit:CharacterBody2D
+
+
+
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var is_gravity_enabled:bool = true
 @export var movement_vectors: Dictionary = {}
@@ -16,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		return
 	var final_velocity :Vector2= Vector2.ZERO
 	
-
+	
 	for component_vector in movement_vectors.values():
 		final_velocity += component_vector
 		

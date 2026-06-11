@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://byx6x0gebbxct"]
 
+[ext_resource type="Script" uid="uid://da7evwwm2q6j7" path="res://Enemies/BaseEnemyBlueprint/base_enemy_blueprint.gd" id="1_n5ywv"]
 [ext_resource type="Texture2D" uid="uid://dhq58da247ctn" path="res://icon.svg" id="1_n8wto"]
 [ext_resource type="PackedScene" uid="uid://bi77v2s7baxmo" path="res://BaseComponents/CentralMovementComponent/CentralMovementComponent.tscn" id="2_kprg5"]
 [ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseComponents/SideScrollComponent/SideScrollingComponent.tscn" id="3_kprg5"]
@@ -10,6 +11,7 @@
 size = Vector2(129, 128)
 
 [node name="BaseEnemyBlueprint" type="CharacterBody2D" unique_id=1116642208]
+script = ExtResource("1_n5ywv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2089185151]
 position = Vector2(-0.5, 0)
@@ -20,12 +22,13 @@ texture = ExtResource("1_n8wto")
 
 [node name="Movement" type="Node" parent="." unique_id=107550172]
 
+[node name="CentralMovementComponent" parent="Movement" unique_id=1041552152 node_paths=PackedStringArray("unit") instance=ExtResource("2_kprg5")]
+unit = NodePath("../..")
+is_gravity_enabled = false
+
 [node name="SideScrollingComponent" parent="Movement" unique_id=668967457 node_paths=PackedStringArray("central_movement_component") instance=ExtResource("3_kprg5")]
 central_movement_component = NodePath("../CentralMovementComponent")
 movement_speed = -14.015
-
-[node name="CentralMovementComponent" parent="Movement" unique_id=1041552152 node_paths=PackedStringArray("unit") instance=ExtResource("2_kprg5")]
-unit = NodePath("../..")
 
 [node name="EnemyUpFov" parent="." unique_id=1943964713 node_paths=PackedStringArray("hp_depletion_machine") instance=ExtResource("4_o7lrv")]
 hp_depletion_machine = NodePath("../HpDepletionMachineComponent")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cmbnoswp2e7r8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ywc0n"]
+radius = 31.016125
+
+[node name="BaseSpawner" type="Node2D" unique_id=506002246]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486788396]
+shape = SubResource("CircleShape2D_ywc0n")
