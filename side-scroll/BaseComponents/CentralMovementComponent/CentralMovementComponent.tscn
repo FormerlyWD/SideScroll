@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bi77v2s7baxmo"]
+
+[ext_resource type="Script" uid="uid://df806dt63jrb0" path="res://BaseComponents/CentralMovementComponent/central_movement_component.gd" id="1_0kbto"]
+
+[node name="CentralMovementComponent" type="Node" unique_id=1041552152]
+script = ExtResource("1_0kbto")
