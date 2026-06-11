@@ -23,14 +23,13 @@ func _physics_process(delta: float) -> void:
 	
 	if not unit.is_on_floor():
 		if is_gravity_enabled: 
-			unit.velocity.y += gravity * delta
-	elif final_velocity.y >= 0:
-
-		unit.velocity.y = 0
+			final_velocity.y += gravity * delta
+	else:
+		if final_velocity.y > 0:
+			final_velocity.y = 0
 		
 
-	unit.velocity.x = final_velocity.x
-	if final_velocity.y != 0:
-		unit.velocity.y = final_velocity.y
+	unit.velocity = final_velocity
+
 		
 	unit.move_and_slide()

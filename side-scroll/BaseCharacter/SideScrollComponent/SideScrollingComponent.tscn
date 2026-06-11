@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://cfxn7014koi2f" path="res://BaseCharacter/SideScrollComponent/side_scrolling_component.gd" id="1_bqlrw"]
 
-[node name="SideScrollingComponent" type="Node2D" unique_id=864817646]
+[node name="SideScrollingComponent" type="Node" unique_id=668967457]
 script = ExtResource("1_bqlrw")

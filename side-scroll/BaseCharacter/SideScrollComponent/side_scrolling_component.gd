@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 class_name SideScrollingComponent
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
