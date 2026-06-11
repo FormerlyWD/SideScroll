@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bi77v2s7baxmo" path="res://BaseComponents/CentralMovementComponent/CentralMovementComponent.tscn" id="2_kprg5"]
 [ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseComponents/SideScrollComponent/SideScrollingComponent.tscn" id="3_kprg5"]
 [ext_resource type="PackedScene" uid="uid://b3dl5hjw61ff5" path="res://Enemies/EnemyComponents/EnemyFovs/EnemyUpFov/EnemyUpFov.tscn" id="4_o7lrv"]
+[ext_resource type="PackedScene" uid="uid://pmhkr284tl0v" path="res://BaseComponents/HpDepletionMachineComponent/HpDepletionMachineComponent.tscn" id="5_nkyev"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dsw0u"]
 size = Vector2(129, 128)
@@ -26,4 +27,9 @@ movement_speed = -14.015
 [node name="CentralMovementComponent" parent="Movement" unique_id=1041552152 node_paths=PackedStringArray("unit") instance=ExtResource("2_kprg5")]
 unit = NodePath("../..")
 
-[node name="EnemyUpFov" parent="." unique_id=1943964713 instance=ExtResource("4_o7lrv")]
+[node name="EnemyUpFov" parent="." unique_id=1943964713 node_paths=PackedStringArray("hp_depletion_machine") instance=ExtResource("4_o7lrv")]
+hp_depletion_machine = NodePath("../HpDepletionMachineComponent")
+
+[node name="HpDepletionMachineComponent" parent="." unique_id=1423403481 instance=ExtResource("5_nkyev")]
+cooldown = 2.0
+machine_speed = 1.0

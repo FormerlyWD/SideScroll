@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://pmhkr284tl0v"]
+
+[ext_resource type="Script" uid="uid://c0ihttgnlcoy8" path="res://BaseComponents/HpDepletionMachineComponent/hp_depletion_machine_component.gd" id="1_5pcrp"]
+
+[node name="HpDepletionMachineComponent" type="Node" unique_id=1423403481]
+script = ExtResource("1_5pcrp")
