@@ -34,5 +34,6 @@ movement_speed = 51.815
 [node name="HpManagerComponent" parent="." unique_id=499507257 instance=ExtResource("5_lhylj")]
 health = 50.0
 
-[node name="PlayerInputLogComponent" parent="." unique_id=867351471 node_paths=PackedStringArray("side_scrolling_component") instance=ExtResource("6_1fcnl")]
+[node name="PlayerInputLogComponent" parent="." unique_id=867351471 node_paths=PackedStringArray("side_scrolling_component", "central_movement_component") instance=ExtResource("6_1fcnl")]
 side_scrolling_component = NodePath("../Movement/SideScrollingComponent")
+central_movement_component = NodePath("../Movement/CentralMovementComponent")
