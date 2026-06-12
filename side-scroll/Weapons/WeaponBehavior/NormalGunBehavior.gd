@@ -7,3 +7,4 @@ class_name NormalGunBehavior
 
 func generate_bullet():
 	pass
+	
