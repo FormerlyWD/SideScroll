@@ -6,5 +6,6 @@ class_name StraightPatternGunWeaponData
 @export var projectile_speed:StatModifier
 @export var projectile_damage:StatModifier
 func apply_xp_for_all_stats(current_xp:float):
-	projectile_speed.initialize_roll(current_xp)
-	projectile_damage.initialize_roll(current_xp)
+	projectile_speed.initialize_roll(current_xp,rarity_modifier[current_rarity])
+	
+	projectile_damage.initialize_roll(current_xp,rarity_modifier[current_rarity])
