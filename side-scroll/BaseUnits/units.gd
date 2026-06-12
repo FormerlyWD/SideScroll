@@ -1,0 +1,3 @@
+extends CharacterBody2D
+class_name Unit
+@export var hp_manager_component:HpManagerComponent
