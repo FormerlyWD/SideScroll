@@ -8,5 +8,5 @@ enum Rarity {
 	RARE
 }
 @export var current_rarity:Rarity
-func apply_xp_for_all_stats():
+func apply_xp_for_all_stats(current_xp:float):
 	pass #override with all StatModifiers
