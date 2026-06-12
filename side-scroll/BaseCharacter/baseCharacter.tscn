@@ -37,9 +37,14 @@ movement_speed = 51.815
 health = 50.0
 
 [node name="PlayerInputLogComponent" parent="." unique_id=867351471 node_paths=PackedStringArray("side_scrolling_component") instance=ExtResource("6_1fcnl")]
+[node name="PlayerInputLogComponent" parent="." unique_id=867351471 node_paths=PackedStringArray("side_scrolling_component", "central_movement_component") instance=ExtResource("6_1fcnl")]
 side_scrolling_component = NodePath("../Movement/SideScrollingComponent")
+<<<<<<< HEAD
 
 [node name="WeaponBehaviorSpawner" parent="." unique_id=1459722398 node_paths=PackedStringArray("stat_component") instance=ExtResource("7_clwky")]
 stat_component = NodePath("../PlayerStatComponent")
 
 [node name="PlayerStatComponent" parent="." unique_id=2024114517 instance=ExtResource("8_4uo3c")]
+=======
+central_movement_component = NodePath("../Movement/CentralMovementComponent")
+>>>>>>> 95cf999b86ff4b8e6f8bc949d3166ce024842199

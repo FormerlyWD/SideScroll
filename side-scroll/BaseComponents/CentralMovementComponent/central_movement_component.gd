@@ -28,7 +28,6 @@ func _physics_process(delta: float) -> void:
 		if is_gravity_enabled: 
 			vertical_air_velocity += gravity * delta
 	else:
-		vertical_air_velocity = 0.0
 		if final_velocity.y > 0:
 			final_velocity.y = 0
 		
