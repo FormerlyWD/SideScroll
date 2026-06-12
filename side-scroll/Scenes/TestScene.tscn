@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://byx6x0gebbxct" path="res://Enemies/BaseEnemyBlueprint/BaseEnemyBlueprint.tscn" id="3_8k7wh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5ayd"]
-size = Vector2(724, 273)
+size = Vector2(2723, 273)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qsjrb"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
@@ -17,16 +17,17 @@ position = Vector2(-352, -201)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=120702127]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1095798274]
-position = Vector2(3, 269)
+position = Vector2(-43.5, 269)
 shape = SubResource("RectangleShape2D_b5ayd")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2077008191]
+modulate = Color(0, 0, 0, 1)
 texture_repeat = 2
-position = Vector2(2, 236)
-scale = Vector2(5.65625, 1.6171875)
+position = Vector2(-53.00006, 236)
+scale = Vector2(21.4375, 1.6171875)
 texture = SubResource("CompressedTexture2D_qsjrb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1783521721]
 
 [node name="BaseEnemyBlueprint" parent="." unique_id=1116642208 instance=ExtResource("3_8k7wh")]
-position = Vector2(32, 67)
+position = Vector2(492, -45)
