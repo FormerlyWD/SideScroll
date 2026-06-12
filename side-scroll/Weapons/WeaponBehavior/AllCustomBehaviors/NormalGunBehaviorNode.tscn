@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://mpv81xxmyvfk"]
 
 [ext_resource type="Script" uid="uid://bkcgu5jly321" path="res://Weapons/WeaponBehavior/NormalGunBehavior.gd" id="1_f3wnx"]
+[ext_resource type="PackedScene" uid="uid://bpbodesus60tg" path="res://Weapons/BulletOutput/BulletOutput.tscn" id="2_iahge"]
 
 [node name="NormalGunBehaviorNode" type="Node2D" unique_id=1264154722]
 script = ExtResource("1_f3wnx")
 metadata/_custom_type_script = "uid://cxgwvyu3ikvpo"
+
+[node name="BulletOutput" parent="." unique_id=1854082611 instance=ExtResource("2_iahge")]

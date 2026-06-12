@@ -1,5 +1,5 @@
 extends WeaponData
-class_name StraightPatternGunWeaponData
+class_name GunPatternWeaponData
 
 
 

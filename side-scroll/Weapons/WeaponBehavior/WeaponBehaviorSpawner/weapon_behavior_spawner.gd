@@ -1,11 +1,11 @@
-extends Node
+extends Node2D
 class_name WeaponBehaviorSpawner
 @export var stat_component:StatComponent
 @onready var current_behavior_slot:WeaponBehavior
 
 
 func _ready() -> void:
-	insert(StraightPatternGunWeaponData.new())
+	insert(GunPatternWeaponData.new())
 func insert(weapon_data:WeaponData) -> void:
 	if current_behavior_slot:
 		current_behavior_slot.queue_free()
@@ -14,7 +14,7 @@ func insert(weapon_data:WeaponData) -> void:
 	
 	var new_behavior:WeaponBehavior
 	
-	if weapon_data is StraightPatternGunWeaponData:
+	if weapon_data is GunPatternWeaponData:
 		new_behavior= WeaponManager.normal_gun_behavior_packed_scene.instantiate()
 		var specified_behavior:NormalGunBehavior = new_behavior as NormalGunBehavior
 		specified_behavior.stat_component = stat_component
@@ -22,3 +22,4 @@ func insert(weapon_data:WeaponData) -> void:
 	new_behavior.weapon_data = weapon_data
 	current_behavior_slot = new_behavior
 	add_child(new_behavior)
+	

@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://drwjdqwk3dueg" path="res://Weapons/WeaponBehavior/WeaponBehaviorSpawner/weapon_behavior_spawner.gd" id="1_n7xt2"]
 
-[node name="WeaponBehaviorSpawner" type="Node" unique_id=1459722398]
+[node name="WeaponBehaviorSpawner" type="Node2D" unique_id=1192242175]
 script = ExtResource("1_n7xt2")
