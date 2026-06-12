@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StraightPatternGunWeaponData" format=3 uid="uid://bbo06q085n783"]
+
+[ext_resource type="Script" uid="uid://dxo6aaa0r8idd" path="res://Weapons/ModificationResources/WeaponData/StraightPatternGun/straight_pattern_gun.gd" id="1_duqne"]
+[ext_resource type="Resource" uid="uid://d340jnt3t0kkt" path="res://Weapons/ModificationResources/StatModifier/StatTemplates/Proj.tres" id="1_e3jyh"]
+
+[resource]
+script = ExtResource("1_duqne")
+projectile_speed = ExtResource("1_e3jyh")
+projectile_damage = ExtResource("1_e3jyh")
+metadata/_custom_type_script = "uid://dxo6aaa0r8idd"

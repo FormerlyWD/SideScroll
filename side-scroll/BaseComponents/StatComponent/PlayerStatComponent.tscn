@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cfjbc1h0ae185"]
+
+[ext_resource type="Script" uid="uid://0pfd1bwq7fju" path="res://BaseComponents/StatComponent/stat_component.gd" id="1_2fpyd"]
+
+[node name="PlayerStatComponent" type="Node" unique_id=2024114517]
+script = ExtResource("1_2fpyd")
+metadata/_custom_type_script = "uid://0pfd1bwq7fju"

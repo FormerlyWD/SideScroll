@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="StatModifierDiminishing" format=3 uid="uid://d340jnt3t0kkt"]
+
+[ext_resource type="Script" uid="uid://bokj0jag3migt" path="res://Weapons/ModificationResources/StatModifier/CustomStatModifierClasses/normal_scaling_modifier.gd" id="1_fmblk"]
+
+[resource]
+script = ExtResource("1_fmblk")
+metadata/_custom_type_script = "uid://bokj0jag3migt"

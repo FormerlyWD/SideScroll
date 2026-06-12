@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bedbxr4vqegfh" path="res://BaseComponents/SideScrollComponent/SideScrollingComponent.tscn" id="4_lhylj"]
 [ext_resource type="PackedScene" uid="uid://b6omj8hfgjrre" path="res://BaseComponents/HpComponent/HpManagerComponent.tscn" id="5_lhylj"]
 [ext_resource type="PackedScene" uid="uid://c4dq35xmlw55y" path="res://BaseCharacter/CharComponents/PlayerInputLogComponent/PlayerInputLogComponent.tscn" id="6_1fcnl"]
+[ext_resource type="PackedScene" uid="uid://dvsuydfo0uvam" path="res://Weapons/WeaponBehavior/WeaponBehaviorSpawner/WeaponBehaviorSpawner.tscn" id="7_clwky"]
+[ext_resource type="PackedScene" uid="uid://cfjbc1h0ae185" path="res://BaseComponents/StatComponent/PlayerStatComponent.tscn" id="8_4uo3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xusn"]
 size = Vector2(127, 203.5)
@@ -36,3 +38,8 @@ health = 50.0
 
 [node name="PlayerInputLogComponent" parent="." unique_id=867351471 node_paths=PackedStringArray("side_scrolling_component") instance=ExtResource("6_1fcnl")]
 side_scrolling_component = NodePath("../Movement/SideScrollingComponent")
+
+[node name="WeaponBehaviorSpawner" parent="." unique_id=1459722398 node_paths=PackedStringArray("stat_component") instance=ExtResource("7_clwky")]
+stat_component = NodePath("../PlayerStatComponent")
+
+[node name="PlayerStatComponent" parent="." unique_id=2024114517 instance=ExtResource("8_4uo3c")]

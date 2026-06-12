@@ -1,2 +1,2 @@
 extends Node2D
-class_name WeaponBehaviorClass
+class_name WeaponBehavior

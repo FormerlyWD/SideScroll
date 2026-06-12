@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mpv81xxmyvfk"]
 
-[ext_resource type="Script" uid="uid://bkcgu5jly321" path="res://Weapons/WeaponBehavior/NormalGunBehavior.gd" id="1_g70vp"]
+[ext_resource type="Script" uid="uid://bkcgu5jly321" path="res://Weapons/WeaponBehavior/NormalGunBehavior.gd" id="1_f3wnx"]
 
 [node name="NormalGunBehaviorNode" type="Node2D" unique_id=1264154722]
-script = ExtResource("1_g70vp")
+script = ExtResource("1_f3wnx")
 metadata/_custom_type_script = "uid://cxgwvyu3ikvpo"
