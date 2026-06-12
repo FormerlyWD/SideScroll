@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="StatModifier" format=3 uid="uid://bowhvao61owbw"]
-
-[ext_resource type="Script" uid="uid://datu1e2rf7ear" path="res://Weapons/ModificationResources/StatModifier/stat_modifier.gd" id="1_obvyq"]
-
-[resource]
-script = ExtResource("1_obvyq")
-metadata/_custom_type_script = "uid://datu1e2rf7ear"

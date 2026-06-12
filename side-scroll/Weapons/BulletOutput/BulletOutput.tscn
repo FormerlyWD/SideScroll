@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bpbodesus60tg"]
+
+[ext_resource type="Script" uid="uid://cw4bqt4ihtux6" path="res://Weapons/BulletOutput/bullet_output.gd" id="1_ywhuo"]
+
+[node name="BulletOutput" type="Node2D" unique_id=1854082611]
+script = ExtResource("1_ywhuo")

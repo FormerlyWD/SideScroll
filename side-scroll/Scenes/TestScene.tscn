@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqj2t6uem1xp8" path="res://BaseCharacter/baseCharacter.tscn" id="1_b5ayd"]
 [ext_resource type="PackedScene" uid="uid://byx6x0gebbxct" path="res://Enemies/BaseEnemyBlueprint/BaseEnemyBlueprint.tscn" id="3_8k7wh"]
+[ext_resource type="Script" uid="uid://cmn8ks2ax7aek" path="res://Weapons/BulletContainer/bullet_container.gd" id="3_iufkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5ayd"]
 size = Vector2(2723, 273)
@@ -30,4 +31,7 @@ texture = SubResource("CompressedTexture2D_qsjrb")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1783521721]
 
 [node name="BaseEnemyBlueprint" parent="." unique_id=1116642208 instance=ExtResource("3_8k7wh")]
-position = Vector2(492, -45)
+position = Vector2(490, -144)
+
+[node name="BulletContainer" type="Node2D" parent="." unique_id=1348890147]
+script = ExtResource("3_iufkg")
