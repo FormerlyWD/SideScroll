@@ -30,4 +30,4 @@ texture = SubResource("CompressedTexture2D_qsjrb")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1783521721]
 
 [node name="BaseEnemyBlueprint" parent="." unique_id=1116642208 instance=ExtResource("3_8k7wh")]
-position = Vector2(492, -45)
+position = Vector2(490, -144)
