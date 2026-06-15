@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_fmblk")
-base_min = 1000.0
-base_max = 1000000.0
+base_min = 1.0
+base_max = 1000.0
 metadata/_custom_type_script = "uid://bokj0jag3migt"

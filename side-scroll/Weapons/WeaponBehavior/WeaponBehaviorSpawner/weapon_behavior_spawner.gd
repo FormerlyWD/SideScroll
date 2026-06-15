@@ -5,7 +5,7 @@ class_name WeaponBehaviorSpawner
 
 
 func _ready() -> void:
-	insert(GunPatternWeaponData.new())
+	insert(load("res://Weapons/ModificationResources/WeaponData/AllResources/normal_gun.tres"))
 func insert(weapon_data:WeaponData) -> void:
 	if current_behavior_slot:
 		current_behavior_slot.queue_free()

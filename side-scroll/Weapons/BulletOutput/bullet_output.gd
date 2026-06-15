@@ -3,9 +3,9 @@ class_name BulletOutput
 @onready var bullet_instance:PackedScene = preload("res://Weapons/Bullet/Bullet.tscn")
 
 
-func generate_bullet(weapon_data:GunPatternWeaponData):
+func generate_bullet():
 	var b:Bullet = bullet_instance.instantiate()
-	
+	var weapon_data:GunPatternWeaponData = owner.weapon_data
 	
 	b.projectile_damage = weapon_data.projectile_damage.final_value
 	b.projectile_speed = weapon_data.projectile_speed.final_value

@@ -6,6 +6,6 @@ class_name NormalGunBehavior
 @export var stat_component:StatComponent 
 
 func generate_bullet():
-	$BulletOutput.generate_bullet(weapon_data)
+	$BulletOutput.generate_bullet()
 	
 	
