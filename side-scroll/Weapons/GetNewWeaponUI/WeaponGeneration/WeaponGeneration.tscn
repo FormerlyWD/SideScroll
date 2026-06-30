@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d3numbq2i1hec"]
+
+[ext_resource type="Script" uid="uid://c44aqwfvuvkti" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/weapon_generation.gd" id="1_4plqi"]
+
+[node name="WeaponGeneration" type="Node" unique_id=769425562]
+script = ExtResource("1_4plqi")

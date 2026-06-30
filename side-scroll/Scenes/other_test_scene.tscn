@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cvi6m3jcvi2o8" path="res://Textures/dimension_1.png" id="5_vjj3u"]
 [ext_resource type="Texture2D" uid="uid://d3ikvf5tmhjcp" path="res://Textures/dirt.png" id="6_xo7o3"]
 [ext_resource type="Script" uid="uid://b60ybtux28om1" path="res://MapGeneratorResources/Scripts/map_generator.gd" id="7_xo7o3"]
+[ext_resource type="Script" uid="uid://cmn8ks2ax7aek" path="res://Weapons/BulletContainer/bullet_container.gd" id="8_vjj3u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toou5"]
 texture = ExtResource("3_s4gdc")
@@ -69,6 +70,9 @@ tile_set = SubResource("TileSet_5rbs6")
 [node name="BaseCharacter" parent="." unique_id=1582287107 instance=ExtResource("1_a4fvh")]
 position = Vector2(-53, -142)
 
+[node name="SideScrollingComponent" parent="BaseCharacter/Movement" parent_id_path=PackedInt32Array(1582287107, 1939757353) index="1" unique_id=668967457]
+movement_speed = 2000.0
+
 [node name="Node2D" type="Node2D" parent="BaseCharacter" unique_id=831323218]
 
 [node name="Sprite2D" type="Sprite2D" parent="BaseCharacter/Node2D" unique_id=570827262]
@@ -81,3 +85,8 @@ position = Vector2(100, -13)
 
 [node name="MapGenerator" type="Node2D" parent="." unique_id=2106801648]
 script = ExtResource("7_xo7o3")
+
+[node name="BulletContainer" type="Node2D" parent="." unique_id=1543722741]
+script = ExtResource("8_vjj3u")
+
+[editable path="BaseCharacter"]

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ubpw831a8gm7"]
+
+[ext_resource type="Script" uid="uid://diq4qdvi5g1pj" path="res://Weapons/GetNewWeaponUI/get_new_weapon_ui.gd" id="1_wapwl"]
+[ext_resource type="Script" uid="uid://l61k70u117ta" path="res://Weapons/GetNewWeaponUI/weapon_stat_ui.gd" id="2_n5pit"]
+[ext_resource type="Script" uid="uid://bm2ycmse8gy45" path="res://Weapons/GetNewWeaponUI/WeaponSelectButton.gd" id="2_r8u5l"]
+[ext_resource type="PackedScene" uid="uid://d3numbq2i1hec" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/WeaponGeneration.tscn" id="3_r8u5l"]
+
+[node name="MainWeaponUiBus" type="Control" unique_id=1400395607 node_paths=PackedStringArray("weapon_stat_ui", "weapon_generation")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wapwl")
+weapon_stat_ui = NodePath("WeaponStatUi")
+weapon_generation = NodePath("WeaponGeneration")
+
+[node name="WeaponStatUi" type="HBoxContainer" parent="." unique_id=473508230 node_paths=PackedStringArray("weapon_generation")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 33
+alignment = 1
+script = ExtResource("2_n5pit")
+weapon_generation = NodePath("../WeaponGeneration")
+
+[node name="WeaponSelectButton" type="Button" parent="WeaponStatUi" unique_id=654709537]
+layout_mode = 2
+size_flags_vertical = 4
+text = "weapon #1"
+script = ExtResource("2_r8u5l")
+
+[node name="WeaponSelectButton2" type="Button" parent="WeaponStatUi" unique_id=248429940]
+layout_mode = 2
+size_flags_vertical = 4
+text = "weapon #2"
+script = ExtResource("2_r8u5l")
+
+[node name="WeaponSelectButton3" type="Button" parent="WeaponStatUi" unique_id=609167398]
+layout_mode = 2
+size_flags_vertical = 4
+text = "weapon #3"
+script = ExtResource("2_r8u5l")
+
+[node name="WeaponGeneration" parent="." unique_id=769425562 instance=ExtResource("3_r8u5l")]
+all_generation_count = 3
+
+[connection signal="pressed" from="WeaponStatUi/WeaponSelectButton" to="WeaponStatUi/WeaponSelectButton" method="_on_pressed"]

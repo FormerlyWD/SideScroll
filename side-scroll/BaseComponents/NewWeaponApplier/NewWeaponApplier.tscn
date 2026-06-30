@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chsxo1oprwhd2"]
+
+[ext_resource type="Script" uid="uid://ds2ernew5fnxf" path="res://BaseComponents/NewWeaponApplier/new_weapon_applier.gd" id="1_lewwt"]
+
+[node name="NewWeaponApplier" type="Node" unique_id=1953390426]
+script = ExtResource("1_lewwt")
