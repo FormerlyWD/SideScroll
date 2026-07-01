@@ -12,9 +12,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xusn"]
 size = Vector2(127, 203.5)
 
-[node name="BaseCharacter" type="CharacterBody2D" unique_id=1582287107 node_paths=PackedStringArray("central_movement_component", "hp_manager_component")]
+[node name="BaseCharacter" type="CharacterBody2D" unique_id=1582287107 node_paths=PackedStringArray("central_movement_component", "weapon_behavior_spawner", "hp_manager_component")]
 script = ExtResource("1_vlvs1")
 central_movement_component = NodePath("Movement/CentralMovementComponent")
+weapon_behavior_spawner = NodePath("WeaponBehaviorSpawner")
 hp_manager_component = NodePath("HpManagerComponent")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1421732356]

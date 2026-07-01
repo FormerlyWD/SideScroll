@@ -3,7 +3,7 @@ class_name weaponStatUi
 @export var weapon_generation: WeaponGeneration
 
 
-signal new_weapon_chosen(id:int)
+signal new_weapon_chosen(weapon_data:WeaponData)
 
 func bind_children_to_signal():
 	var count:int = 0
@@ -14,6 +14,7 @@ func bind_children_to_signal():
 func chose_weapon(id:int):
 	var new:WeaponData = weapon_generation.currently_generated_weapon_array[id]
 	print(weapon_generation.currently_generated_weapon_array[id])
+	new_weapon_chosen.emit(new)
 func bind_children_to_id():
 	var id_parse:int = 0
 	for child in get_children():
