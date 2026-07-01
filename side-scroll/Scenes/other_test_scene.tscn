@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d3ikvf5tmhjcp" path="res://Textures/dirt.png" id="6_xo7o3"]
 [ext_resource type="Script" uid="uid://b60ybtux28om1" path="res://MapGeneratorResources/Scripts/map_generator.gd" id="7_xo7o3"]
 [ext_resource type="Script" uid="uid://cmn8ks2ax7aek" path="res://Weapons/BulletContainer/bullet_container.gd" id="8_vjj3u"]
+[ext_resource type="PackedScene" uid="uid://ubpw831a8gm7" path="res://Weapons/GetNewWeaponUI/GetNewWeaponUI.tscn" id="9_toou5"]
 [ext_resource type="PackedScene" uid="uid://copd5l873ol2e" path="res://Weapons/GetNewWeaponUI/GetWeaponPoint/GetWeaponPoint.tscn" id="9_xo7o3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toou5"]
@@ -92,13 +93,18 @@ script = ExtResource("7_xo7o3")
 script = ExtResource("8_vjj3u")
 
 [node name="OnWeaponUpgradeCanvas" type="CanvasLayer" parent="." unique_id=1084785550]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="OnWeaponUpgradeCanvas" unique_id=1335440458]
+visible = false
 offset_left = -660.0
 offset_top = -573.0
 offset_right = 790.0
 offset_bottom = 411.0
+
+[node name="MainWeaponUiBus" parent="OnWeaponUpgradeCanvas" unique_id=1400395607 instance=ExtResource("9_toou5")]
+visible = false
+offset_left = -10.035
+offset_right = -10.035034
 
 [node name="GetWeaponPoint" parent="." unique_id=231668470 instance=ExtResource("9_xo7o3")]
 position = Vector2(866, -6)
