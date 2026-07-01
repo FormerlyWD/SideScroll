@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d3ikvf5tmhjcp" path="res://Textures/dirt.png" id="6_xo7o3"]
 [ext_resource type="Script" uid="uid://b60ybtux28om1" path="res://MapGeneratorResources/Scripts/map_generator.gd" id="7_xo7o3"]
 [ext_resource type="Script" uid="uid://cmn8ks2ax7aek" path="res://Weapons/BulletContainer/bullet_container.gd" id="8_vjj3u"]
+[ext_resource type="PackedScene" uid="uid://copd5l873ol2e" path="res://Weapons/GetNewWeaponUI/GetWeaponPoint/GetWeaponPoint.tscn" id="9_xo7o3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toou5"]
 texture = ExtResource("3_s4gdc")
@@ -88,5 +89,18 @@ script = ExtResource("7_xo7o3")
 
 [node name="BulletContainer" type="Node2D" parent="." unique_id=1543722741]
 script = ExtResource("8_vjj3u")
+
+[node name="OnWeaponUpgradeCanvas" type="CanvasLayer" parent="." unique_id=1084785550]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="OnWeaponUpgradeCanvas" unique_id=1335440458]
+offset_left = -660.0
+offset_top = -573.0
+offset_right = 790.0
+offset_bottom = 411.0
+
+[node name="GetWeaponPoint" parent="." unique_id=231668470 node_paths=PackedStringArray("on_weapon_upgrade_canvas") instance=ExtResource("9_xo7o3")]
+position = Vector2(900, 0)
+on_weapon_upgrade_canvas = NodePath("../OnWeaponUpgradeCanvas")
 
 [editable path="BaseCharacter"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://copd5l873ol2e"]
+
+[ext_resource type="Script" uid="uid://babx74rcvblax" path="res://Weapons/GetNewWeaponUI/GetWeaponPoint/get_weapon_point.gd" id="1_r2vyg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8lx6u"]
+
+[node name="GetWeaponPoint" type="Area2D" unique_id=231668470]
+script = ExtResource("1_r2vyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=981563676]
+shape = SubResource("CircleShape2D_8lx6u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
