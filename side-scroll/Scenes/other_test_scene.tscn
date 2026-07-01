@@ -69,6 +69,7 @@ tile_map_data = PackedByteArray("AADp/wgABAAAAAAAAADp/wkABAAAAAEAAADq/wgABAABAAA
 tile_set = SubResource("TileSet_5rbs6")
 
 [node name="BaseCharacter" parent="." unique_id=1582287107 instance=ExtResource("1_a4fvh")]
+unique_name_in_owner = true
 position = Vector2(-53, -142)
 
 [node name="SideScrollingComponent" parent="BaseCharacter/Movement" parent_id_path=PackedInt32Array(1582287107, 1939757353) index="1" unique_id=668967457]
@@ -99,8 +100,7 @@ offset_top = -573.0
 offset_right = 790.0
 offset_bottom = 411.0
 
-[node name="GetWeaponPoint" parent="." unique_id=231668470 node_paths=PackedStringArray("on_weapon_upgrade_canvas") instance=ExtResource("9_xo7o3")]
-position = Vector2(900, 0)
-on_weapon_upgrade_canvas = NodePath("../OnWeaponUpgradeCanvas")
+[node name="GetWeaponPoint" parent="." unique_id=231668470 instance=ExtResource("9_xo7o3")]
+position = Vector2(866, -6)
 
 [editable path="BaseCharacter"]

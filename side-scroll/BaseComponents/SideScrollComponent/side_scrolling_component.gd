@@ -17,6 +17,7 @@ func _ready() -> void:
 		
 func switch_movement_state(new_move_state:MoveState):
 	current_move_state = new_move_state
+	
 	move()
 func move():
 	if not central_movement_component:
