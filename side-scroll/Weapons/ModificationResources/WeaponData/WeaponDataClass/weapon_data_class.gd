@@ -1,7 +1,8 @@
 extends Resource
 class_name WeaponData
 
-@export var weapon_name:String
+@export var base_weapon_name:String = ""
+var weapon_name:String
 enum Rarity {
 	COMMON,
 	UNCOMMON,
@@ -21,9 +22,11 @@ func apply_xp_for_all_stats(current_xp:float):
 		stat.initialize_roll(current_xp,rarity_modifier[current_rarity])
 func make_ui_stat_list():
 	pass
-
-func initialize_weapon_data():
+func make_random_name():
 	
+	weapon_name = "%s %s V%03d" % [Rarity.find_key(current_rarity).capitalize() , base_weapon_name, (randi_range(0,999))]
+func initialize_weapon_data():
+	make_random_name()
 	
 	for property in get_property_list():
 		var name:String = property.name

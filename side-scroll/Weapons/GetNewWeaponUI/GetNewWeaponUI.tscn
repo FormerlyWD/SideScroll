@@ -30,15 +30,12 @@ weapon_generation = NodePath("../WeaponGeneration")
 
 [node name="WeaponDescriptionPanel" parent="WeaponStatUi" unique_id=1619225639 instance=ExtResource("3_n5pit")]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="WeaponDescriptionPanel2" parent="WeaponStatUi" unique_id=1893899795 instance=ExtResource("3_n5pit")]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="WeaponDescriptionPanel3" parent="WeaponStatUi" unique_id=348619559 instance=ExtResource("3_n5pit")]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="WeaponGeneration" parent="." unique_id=769425562 instance=ExtResource("3_r8u5l")]
 all_generation_count = 3

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c5eypjklxrbw8" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/stats_modification_describer.gd" id="2_ugnl4"]
 [ext_resource type="PackedScene" uid="uid://cfqgepycpwyst" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/StatDescriptionRow/StatDescriptionRow.tscn" id="3_b3ml3"]
 
-[node name="WeaponDescriptionPanel" type="VBoxContainer" unique_id=804077158 node_paths=PackedStringArray("stats_modification_describer")]
+[node name="WeaponDescriptionPanel" type="VBoxContainer" unique_id=804077158 node_paths=PackedStringArray("stats_modification_describer", "name_label")]
 anchors_preset = -1
 anchor_right = 0.393
 anchor_bottom = 1.0
@@ -15,16 +15,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_dboj6")
 stats_modification_describer = NodePath("StatsModificationDescriber")
+name_label = NodePath("NameLabel")
 
-[node name="Label" type="Label" parent="." unique_id=1497959539]
+[node name="NameLabel" type="Label" parent="." unique_id=1497959539]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Weapon #x"
-
-[node name="ConfirmTakeButton" type="Button" parent="." unique_id=1805183185]
-layout_mode = 2
-size_flags_vertical = 3
-text = "take"
 
 [node name="StatsModificationDescriber" type="VBoxContainer" parent="." unique_id=1856890015]
 layout_mode = 2
@@ -32,5 +28,10 @@ size_flags_vertical = 3
 script = ExtResource("2_ugnl4")
 loaded_stat_description_row = ExtResource("3_b3ml3")
 metadata/_edit_use_anchors_ = true
+
+[node name="ConfirmTakeButton" type="Button" parent="." unique_id=1805183185]
+layout_mode = 2
+size_flags_vertical = 3
+text = "take"
 
 [connection signal="pressed" from="ConfirmTakeButton" to="." method="_on_confirm_take_button_pressed"]
