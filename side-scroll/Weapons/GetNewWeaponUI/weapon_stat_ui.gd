@@ -11,6 +11,22 @@ func bind_children_to_signal():
 		if child.has_signal("pressed"):
 			if not child.is_connected("pressed",chose_weapon):
 				child.pressed.connect(chose_weapon.bind(child.id))
+				
+func bind_properties_to_children():
+	var count:int = 0
+	for child in get_children():
+		if child is WeaponDescriptionPanel:
+			child.id = count
+			if child.has_signal("pressed"):
+				if not child.is_connected("pressed",chose_weapon):
+					child.pressed.connect(chose_weapon.bind(count))
+			
+
+			
+			child.describe_weapon(weapon_generation.currently_generated_weapon_array[count])
+			
+			count +=1
+		
 func chose_weapon(id:int):
 	var new:WeaponData = weapon_generation.currently_generated_weapon_array[id]
 	print(weapon_generation.currently_generated_weapon_array[id])

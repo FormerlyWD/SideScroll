@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://d3numbq2i1hec"]
 
 [ext_resource type="Script" uid="uid://c44aqwfvuvkti" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/weapon_generation.gd" id="1_4plqi"]
+[ext_resource type="Script" uid="uid://dn0wp8f6glutp" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/rarity_chances_calculation.gd" id="2_0jc3c"]
 
-[node name="WeaponGeneration" type="Node" unique_id=769425562]
+[node name="WeaponGeneration" type="Node" unique_id=769425562 node_paths=PackedStringArray("rarity_chances_calculation")]
 script = ExtResource("1_4plqi")
+rarity_chances_calculation = NodePath("RarityChancesCalculation")
+
+[node name="RarityChancesCalculation" type="Node" parent="." unique_id=857148941]
+script = ExtResource("2_0jc3c")

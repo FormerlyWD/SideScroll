@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b1525hlc4d6k8"]
+
+[ext_resource type="Script" uid="uid://dwhwmxlc44hmo" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/weapon_description_panel.gd" id="1_dboj6"]
+[ext_resource type="Script" uid="uid://c5eypjklxrbw8" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/stats_modification_describer.gd" id="2_ugnl4"]
+
+[node name="WeaponDescriptionPanel" type="VBoxContainer" unique_id=804077158 node_paths=PackedStringArray("stats_modification_describer")]
+anchors_preset = -1
+anchor_right = 0.393
+anchor_bottom = 1.0
+offset_right = 0.26397705
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dboj6")
+stats_modification_describer = NodePath("StatsModificationDescriber")
+
+[node name="Label" type="Label" parent="." unique_id=1497959539]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Weapon #x"
+
+[node name="ConfirmTakeButton" type="Button" parent="." unique_id=1805183185]
+layout_mode = 2
+size_flags_vertical = 3
+text = "take"
+
+[node name="StatsModificationDescriber" type="VBoxContainer" parent="." unique_id=1856890015]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_ugnl4")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ConfirmTakeButton" to="." method="_on_confirm_take_button_pressed"]

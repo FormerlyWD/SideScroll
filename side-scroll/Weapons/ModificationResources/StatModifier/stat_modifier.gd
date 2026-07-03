@@ -9,6 +9,7 @@ class_name StatModifier
 # for example if i have an item *still not confirmed* and it gives +50% proj. speed
 # it must preview the changes as a popup, like 500->1000 proj speed
 # just like in my old game Outer Space
+@export var ui_name:String
 @export var base_min: float = 5.0
 @export var base_max: float = 15.0
 
@@ -20,7 +21,7 @@ var flat_modifiers:float = 0.0
 var final_value:float = 0.0
 
 func initialize_roll(current_xp: float, rarity_modifier:float = 1.0):
-	rng_result_value = randf_range(base_min, base_max) * rarity_modifier
+	rng_result_value = randi_range(base_min, base_max) * rarity_modifier
 	update_calculations(current_xp)
 func add_bonus_xp(amount: float, current_weapon_xp: float):
 	external_bonus_xp += amount
