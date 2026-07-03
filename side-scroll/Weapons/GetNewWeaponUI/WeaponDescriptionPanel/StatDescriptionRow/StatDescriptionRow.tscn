@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cfqgepycpwyst"]
+
+[ext_resource type="Script" uid="uid://cs2cos1nsqspq" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/StatDescriptionRow/stat_description_row.gd" id="1_06cot"]
+
+[node name="StatDescriptionRow" type="HBoxContainer" unique_id=46034554 node_paths=PackedStringArray("stat_name", "stat_value")]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.577
+offset_bottom = 0.10397339
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_06cot")
+stat_name = NodePath("name")
+stat_value = NodePath("value")
+
+[node name="name" type="RichTextLabel" parent="." unique_id=1890627180]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"StatRowDescribers"
+text = "ewr"
+
+[node name="value" type="RichTextLabel" parent="." unique_id=1767966356]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"StatRowDescribers"
+text = "waras"

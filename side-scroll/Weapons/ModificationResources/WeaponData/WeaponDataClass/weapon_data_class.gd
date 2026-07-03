@@ -30,5 +30,5 @@ func initialize_weapon_data():
 		var value = get(name)
 		
 		if value is StatModifier:
-			value.ui_name = name
+			value.ui_name = ClassUtillity.humanize_snake_case(name)
 			all_stat_modifiers.append(value)

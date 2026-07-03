@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SideScroll"
-run/main_scene="uid://c77tcss6buf0p"
+run/main_scene="uid://bpmb4ym5quksl"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 WeaponManager="*uid://bwloukcgfed4m"
 References="*uid://cewrspawmg16i"
+ClassUtillity="*uid://cl2o60w8hd6eg"
+
+[gui]
+
+theme/custom="uid://bc0cch08b33od"
 
 [input]
 

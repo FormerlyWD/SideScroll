@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwhwmxlc44hmo" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/weapon_description_panel.gd" id="1_dboj6"]
 [ext_resource type="Script" uid="uid://c5eypjklxrbw8" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/stats_modification_describer.gd" id="2_ugnl4"]
+[ext_resource type="PackedScene" uid="uid://cfqgepycpwyst" path="res://Weapons/GetNewWeaponUI/WeaponDescriptionPanel/StatDescriptionRow/StatDescriptionRow.tscn" id="3_b3ml3"]
 
 [node name="WeaponDescriptionPanel" type="VBoxContainer" unique_id=804077158 node_paths=PackedStringArray("stats_modification_describer")]
 anchors_preset = -1
@@ -10,6 +11,8 @@ anchor_bottom = 1.0
 offset_right = 0.26397705
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_dboj6")
 stats_modification_describer = NodePath("StatsModificationDescriber")
 
@@ -27,6 +30,7 @@ text = "take"
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("2_ugnl4")
+loaded_stat_description_row = ExtResource("3_b3ml3")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ConfirmTakeButton" to="." method="_on_confirm_take_button_pressed"]
