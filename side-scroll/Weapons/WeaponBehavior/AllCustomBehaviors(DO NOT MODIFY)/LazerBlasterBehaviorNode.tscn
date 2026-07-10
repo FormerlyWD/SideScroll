@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ciqbrjrcxgkui"]
+
+[ext_resource type="Script" uid="uid://q6xlnnf5246m" path="res://Weapons/WeaponBehavior/AllCustomBehaviors(DO NOT MODIFY)/scripts/lazer_blaster_behavior_node.gd" id="1_2ssje"]
+[ext_resource type="PackedScene" uid="uid://pmhkr284tl0v" path="res://BaseComponents/HpDepletionMachineComponent/HpDepletionMachineComponent.tscn" id="2_6tigj"]
+[ext_resource type="PackedScene" uid="uid://dcfp7ulcn3a6j" path="res://Weapons/LazerArea/LazerArea.tscn" id="3_5v4m6"]
+
+[node name="LazerBlasterBehaviorNode" type="Node2D" unique_id=60392944 node_paths=PackedStringArray("hp_depletion_machine_component")]
+script = ExtResource("1_2ssje")
+hp_depletion_machine_component = NodePath("HpDepletionMachineComponent")
+metadata/_custom_type_script = "uid://cxgwvyu3ikvpo"
+
+[node name="HpDepletionMachineComponent" parent="." unique_id=1423403481 instance=ExtResource("2_6tigj")]
+
+[node name="LazerArea" parent="." unique_id=835265977 node_paths=PackedStringArray("hp_depletion_machine_component") instance=ExtResource("3_5v4m6")]
+hp_depletion_machine_component = NodePath("../HpDepletionMachineComponent")

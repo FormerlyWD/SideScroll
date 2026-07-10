@@ -11,7 +11,7 @@ func _input(event: InputEvent) -> void:
 		
 		
 		
-		weapon_behavior_spawner.current_behavior_slot.generate_bullet()
+		weapon_behavior_spawner.current_behavior_slot.activate_weapon()
 		
 		central_movement_component.switch_to_reverse_movement_state()
 	if event.is_action_released("Halt"):

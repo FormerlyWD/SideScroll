@@ -10,3 +10,5 @@ class_name GunPatternWeaponData
 
 
 	
+func _init() -> void:
+	weapon_name = "gun"

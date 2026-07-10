@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dcfp7ulcn3a6j"]
+
+[ext_resource type="Script" uid="uid://db2pbenxh1m4p" path="res://Weapons/LazerArea/lazer_area.gd" id="1_ypaqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0var6"]
+size = Vector2(33, 20)
+
+[node name="LazerArea" type="Area2D" unique_id=835265977]
+script = ExtResource("1_ypaqf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=147619422]
+position = Vector2(6.5, 0)
+shape = SubResource("RectangleShape2D_0var6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

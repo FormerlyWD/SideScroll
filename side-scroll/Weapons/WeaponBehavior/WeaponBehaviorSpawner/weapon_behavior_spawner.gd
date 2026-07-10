@@ -13,14 +13,19 @@ func insert(weapon_data:WeaponData) -> void:
 	#weapon_data.apply_xp_for_all_stats(stat_component.current_xp)
 	
 	var new_behavior:WeaponBehavior
-	
 	if weapon_data is GunPatternWeaponData:
 		new_behavior= WeaponManager.normal_gun_behavior_packed_scene.instantiate()
-		var specified_behavior:NormalGunBehavior = new_behavior as NormalGunBehavior
-		specified_behavior.stat_component = stat_component
+	elif weapon_data is LazerBlasterWeaponData:
+		new_behavior= WeaponManager.lazer_blaster_behavior_packed_scene.instantiate()
 	
+	
+	new_behavior.stat_component = stat_component
+
+		
+
 	new_behavior.weapon_data = weapon_data
 	current_behavior_slot = new_behavior
 	add_child(new_behavior)
+	new_behavior.on_weapon_ready()
 	
 	

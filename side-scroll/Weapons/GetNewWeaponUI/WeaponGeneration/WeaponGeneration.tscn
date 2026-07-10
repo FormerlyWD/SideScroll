@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://d3numbq2i1hec"]
 
 [ext_resource type="Script" uid="uid://c44aqwfvuvkti" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/weapon_generation.gd" id="1_4plqi"]
-[ext_resource type="Script" uid="uid://dn0wp8f6glutp" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/rarity_chances_calculation.gd" id="2_0jc3c"]
+[ext_resource type="Script" uid="uid://dn0wp8f6glutp" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/chance_calculations/rarity_chances_calculation.gd" id="2_0jc3c"]
+[ext_resource type="Script" uid="uid://c8r1hk70k27vk" path="res://Weapons/GetNewWeaponUI/WeaponGeneration/chance_calculations/weapon_type_chances_calculation.gd" id="3_gmn1e"]
 
-[node name="WeaponGeneration" type="Node" unique_id=769425562 node_paths=PackedStringArray("rarity_chances_calculation")]
+[node name="WeaponGeneration" type="Node" unique_id=769425562 node_paths=PackedStringArray("rarity_chances_calculation", "weapon_type_chances_calculation")]
 script = ExtResource("1_4plqi")
 rarity_chances_calculation = NodePath("RarityChancesCalculation")
+weapon_type_chances_calculation = NodePath("WeaponTypeChancesCalculation")
 
 [node name="RarityChancesCalculation" type="Node" parent="." unique_id=857148941]
 script = ExtResource("2_0jc3c")
+
+[node name="WeaponTypeChancesCalculation" type="Node" parent="." unique_id=414290735]
+script = ExtResource("3_gmn1e")
+metadata/_custom_type_script = "uid://c8r1hk70k27vk"
